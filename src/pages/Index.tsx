@@ -78,8 +78,8 @@ const Index = () => {
             <Card className="text-center p-6 bg-gradient-to-br from-secondary/5 to-secondary/10 border-secondary/20">
               <CardContent className="space-y-3 p-0">
                 <Icon name="BookOpen" className="mx-auto text-secondary" size={40} />
-                <h4 className="font-bold text-lg">Часть серии</h4>
-                <p className="text-muted-foreground">Продолжение приключений молодых сыщиков</p>
+                <h4 className="font-bold text-lg">Первая книга серии</h4>
+                <p className="text-muted-foreground">Начало приключений молодых сыщиков</p>
               </CardContent>
             </Card>
             <Card className="text-center p-6 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
