@@ -28,7 +28,7 @@ const Index = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
-                <a href="#buy">
+                <a href="https://www.litres.ru/72995277/" target="_blank" rel="noopener noreferrer">
                   <Icon name="ShoppingCart" className="mr-2" size={20} />
                   Купить на Литрес
                 </a>
@@ -136,7 +136,7 @@ const Index = () => {
                 size="lg" 
                 className="w-full md:w-auto bg-secondary hover:bg-secondary/90 text-xl py-6 px-12"
               >
-                <a href="https://www.litres.ru" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.litres.ru/72995277/" target="_blank" rel="noopener noreferrer">
                   <Icon name="ExternalLink" className="mr-2" size={24} />
                   Перейти на Литрес
                 </a>
