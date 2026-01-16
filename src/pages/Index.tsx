@@ -4,230 +4,161 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-primary">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLS45LTItMi0yaC04Yy0xLjEgMC0yIC45LTIgMnY4YzAgMS4xLjkgMiAyIDJoOGMxLjEgMCAyLS45IDItMnYtOHptLTIgNmgtNHYtNGg0djR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-white space-y-6 animate-fade-in">
-              <div className="inline-block px-4 py-2 bg-accent rounded-full text-sm font-semibold mb-4">
-                🔍 Новинка серии
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Юные Сыщики: Тайна Старого Особняка
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 font-medium">
-                Захватывающее детективное приключение для юных читателей
-              </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-lg shadow-xl hover:scale-105 transition-transform"
-                  onClick={() => document.getElementById('buy')?.scrollIntoView({ behavior: 'smooth' })}
-                >
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-white">
+      <header className="container mx-auto px-4 py-8">
+        <nav className="flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-primary">🔍 Детективы</h1>
+          <Button asChild className="bg-secondary hover:bg-secondary/90">
+            <a href="#buy">Купить книгу</a>
+          </Button>
+        </nav>
+      </header>
+
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6 animate-fade-in">
+            <div className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">
+              Серия о молодых сыщиках
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight">
+              Тайна поселка<br />"Сосновый Бор"
+            </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              За забором шипит тишина. Пять друзей нашли её источник...
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+                <a href="#buy">
                   <Icon name="ShoppingCart" className="mr-2" size={20} />
                   Купить на Литрес
-                </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white/30 font-semibold px-8 py-6 text-lg"
-                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Узнать больше
-                </Button>
-              </div>
-            </div>
-            
-            <div className="relative animate-scale-in">
-              <div className="absolute -inset-4 bg-accent/30 rounded-3xl blur-2xl"></div>
-              <img 
-                src="https://cdn.poehali.dev/projects/980fbb1d-d858-4a40-b678-c0ed39e4650f/files/834d3936-742a-4e40-8440-fa026ab56550.jpg"
-                alt="Обложка книги"
-                className="relative rounded-2xl shadow-2xl w-full hover:scale-105 transition-transform duration-500"
-              />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8">
+                <a href="#about">Подробнее</a>
+              </Button>
             </div>
           </div>
-        </div>
-        
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <Icon name="ChevronDown" className="text-white" size={32} />
+          <div className="relative animate-scale-in">
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-20"></div>
+            <img 
+              src="https://cdn.poehali.dev/projects/980fbb1d-d858-4a40-b678-c0ed39e4650f/files/f06558ba-2c9e-4e27-8fea-570deab2f724.jpg"
+              alt="Обложка книги Тайна поселка Сосновый Бор"
+              className="relative rounded-2xl shadow-2xl w-full"
+            />
+          </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary">
-              О книге
-            </h2>
-            <div className="h-1 w-24 bg-accent mx-auto mb-12"></div>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <Card className="hover:shadow-lg transition-shadow animate-fade-in hover:scale-105 transition-transform duration-300">
-                <CardContent className="pt-6">
-                  <div className="text-4xl mb-4 text-center">📚</div>
-                  <h3 className="font-bold text-xl mb-2 text-center">Часть серии</h3>
-                  <p className="text-muted-foreground text-center">
-                    Новая захватывающая глава в серии о молодых детективах
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="hover:shadow-lg transition-shadow animate-fade-in hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.1s' }}>
-                <CardContent className="pt-6">
-                  <div className="text-4xl mb-4 text-center">🎯</div>
-                  <h3 className="font-bold text-xl mb-2 text-center">Возраст 10-14 лет</h3>
-                  <p className="text-muted-foreground text-center">
-                    Идеально подходит для среднего школьного возраста
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card className="hover:shadow-lg transition-shadow animate-fade-in hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.2s' }}>
-                <CardContent className="pt-6">
-                  <div className="text-4xl mb-4 text-center">🔮</div>
-                  <h3 className="font-bold text-xl mb-2 text-center">С продолжением</h3>
-                  <p className="text-muted-foreground text-center">
-                    Следите за новыми приключениями героев
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+      <section id="about" className="container mx-auto px-4 py-16 bg-white/50 backdrop-blur">
+        <div className="max-w-4xl mx-auto space-y-12">
+          <div className="text-center space-y-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-primary">О книге</h3>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto"></div>
+          </div>
 
-            <Card className="bg-white shadow-xl">
-              <CardContent className="pt-8 pb-8">
-                <h3 className="text-2xl font-bold mb-6 text-primary">Сюжет</h3>
-                <div className="space-y-4 text-lg leading-relaxed text-foreground/90">
-                  <p>
-                    Группа талантливых школьников-детективов получает загадочное письмо о пропаже 
-                    старинного артефакта в заброшенном особняке на окраине города. То, что начинается 
-                    как обычное расследование, превращается в невероятное приключение, полное тайн и неожиданных открытий.
-                  </p>
-                  <p>
-                    Каждый из юных сыщиков обладает уникальными способностями: один разгадывает шифры, 
-                    другой чувствует ложь, третий мастер маскировки. Работая вместе, они раскрывают 
-                    секреты, которые скрывались столетиями.
-                  </p>
-                  <div className="flex items-start gap-3 bg-secondary/10 p-4 rounded-lg mt-6">
-                    <Icon name="Sparkles" className="text-secondary mt-1" size={24} />
-                    <p className="font-semibold text-secondary">
-                      Динамичный сюжет, яркие персонажи и неожиданные повороты — 
-                      книга, от которой невозможно оторваться!
-                    </p>
-                  </div>
-                </div>
+          <Card className="border-2 border-primary/10 shadow-xl">
+            <CardContent className="p-8 space-y-6">
+              <p className="text-lg leading-relaxed text-foreground">
+                Лето в «Сосновом Бору» началось с тишины. Не с мирной, а с той, что звенит в ушах и выжигает землю. Пять друзей нашли её источник: старую избу, зажатую в кольцо нового, идеального забора. Ночью оттуда доносилось странное металлическое шипение. Днём появлялись люди, похожие не на жильцов, а на актёров в плохой пьесе. Они молча выносили чёрные мешки.
+              </p>
+              <p className="text-lg leading-relaxed text-foreground">
+                Любопытство стало навязчивой идеей. А потом — страхом. Потому что тем, кто скрывается за забором, не понравилось внимание. И они дали это понять. Теперь ребятам предстоит узнать, что опаснее: тайна, что прячется в заброшенном доме, или правда, которая выйдет наружу, когда они её найдут.
+              </p>
+            </CardContent>
+          </Card>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="text-center p-6 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+              <CardContent className="space-y-3 p-0">
+                <Icon name="Users" className="mx-auto text-primary" size={40} />
+                <h4 className="font-bold text-lg">Для юных читателей</h4>
+                <p className="text-muted-foreground">Захватывающий сюжет для детей и подростков</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6 bg-gradient-to-br from-secondary/5 to-secondary/10 border-secondary/20">
+              <CardContent className="space-y-3 p-0">
+                <Icon name="BookOpen" className="mx-auto text-secondary" size={40} />
+                <h4 className="font-bold text-lg">Часть серии</h4>
+                <p className="text-muted-foreground">Продолжение приключений молодых сыщиков</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center p-6 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
+              <CardContent className="space-y-3 p-0">
+                <Icon name="Lightbulb" className="mx-auto text-accent" size={40} />
+                <h4 className="font-bold text-lg">Развивает мышление</h4>
+                <p className="text-muted-foreground">Логика, внимание к деталям, дедукция</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      <section id="author" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-primary">
-              Об авторе
-            </h2>
-            <div className="h-1 w-24 bg-accent mx-auto mb-12"></div>
-            
-            <Card className="overflow-hidden shadow-2xl">
-              <CardContent className="p-0">
-                <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 relative h-64 md:h-auto">
-                    <img 
-                      src="https://cdn.poehali.dev/projects/980fbb1d-d858-4a40-b678-c0ed39e4650f/files/267579cf-7a37-4c7f-8884-f7f8a40d87ac.jpg"
-                      alt="Автор"
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-background/80 to-transparent"></div>
-                  </div>
-                  
-                  <div className="md:col-span-3 p-8 md:p-12 space-y-6">
-                    <div>
-                      <h3 className="text-3xl font-bold mb-2 text-primary">Елена Волкова</h3>
-                      <p className="text-muted-foreground text-lg">Автор детских детективов</p>
-                    </div>
-                    
-                    <div className="space-y-4 text-lg text-foreground/90">
-                      <p>
-                        Елена Волкова — автор бестселлеров для детей и подростков с 15-летним опытом. 
-                        Её книги переведены на 12 языков и завоевали множество литературных премий.
-                      </p>
-                      <p>
-                        Серия "Юные Сыщики" стала её визитной карточкой — более 500 000 проданных экземпляров 
-                        и миллионы юных читателей по всему миру следят за приключениями героев.
-                      </p>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-3 pt-4">
-                      <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-full">
-                        <Icon name="Award" className="text-accent" size={20} />
-                        <span className="font-semibold">12 наград</span>
-                      </div>
-                      <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-full">
-                        <Icon name="BookOpen" className="text-secondary" size={20} />
-                        <span className="font-semibold">25+ книг</span>
-                      </div>
-                      <div className="flex items-center gap-2 bg-muted px-4 py-2 rounded-full">
-                        <Icon name="Users" className="text-primary" size={20} />
-                        <span className="font-semibold">500K+ читателей</span>
-                      </div>
-                    </div>
-                  </div>
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <Card className="overflow-hidden shadow-2xl border-2 border-secondary/20">
+            <div className="grid md:grid-cols-[300px_1fr] gap-0">
+              <div className="bg-gradient-to-br from-secondary/20 to-primary/20 p-8 flex items-center justify-center">
+                <img 
+                  src="https://cdn.poehali.dev/projects/980fbb1d-d858-4a40-b678-c0ed39e4650f/files/79dfa927-fff7-4fbc-b962-2ac152684377.jpg"
+                  alt="Автор Даша Скворцова"
+                  className="rounded-full w-48 h-48 object-cover border-4 border-white shadow-xl"
+                />
+              </div>
+              <CardContent className="p-8 space-y-4 flex flex-col justify-center">
+                <div>
+                  <h3 className="text-3xl font-bold text-primary mb-2">Даша Скворцова</h3>
+                  <p className="text-secondary font-semibold">Автор</p>
                 </div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Создатель увлекательных детективных историй для юных читателей. Даша верит, что каждый ребёнок — это маленький детектив, способный разгадать самую запутанную тайну.
+                </p>
               </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="buy" className="py-20 bg-gradient-to-br from-secondary via-accent to-secondary relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE2YzAtMS4xLS45LTItMi0yaC04Yy0xLjEgMC0yIC45LTIgMnY4YzAgMS4xLjkgMiAyIDJoOGMxLjEgMCAyLS45IDItMnYtOHptLTIgNmgtNHYtNGg0djR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-50"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Начните приключение прямо сейчас!
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 text-white/90">
-              Доступна в электронном и аудио форматах на Литрес
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
-                <Icon name="Zap" className="text-accent" size={24} />
-                <span className="font-semibold text-lg">Моментальная загрузка</span>
-              </div>
-              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
-                <Icon name="Star" className="text-accent" size={24} />
-                <span className="font-semibold text-lg">Рейтинг 4.8/5</span>
-              </div>
             </div>
-            
-            <Button 
-              size="lg" 
-              className="bg-white text-secondary hover:bg-white/90 font-bold px-12 py-8 text-xl shadow-2xl hover:scale-110 transition-transform"
-              onClick={() => window.open('https://www.litres.ru/', '_blank')}
-            >
-              <Icon name="ShoppingCart" className="mr-3" size={24} />
-              Купить на Литрес
-              <Icon name="ExternalLink" className="ml-3" size={20} />
-            </Button>
-            
-            <p className="mt-6 text-white/80 text-sm">
-              💳 Безопасная оплата • 📱 Доступно на всех устройствах • 🎧 Есть аудиоверсия
-            </p>
-          </div>
+          </Card>
         </div>
       </section>
 
-      <footer className="bg-primary text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-white/80">
-            © 2026 Юные Сыщики. Серия детективных книг для детей.
-          </p>
+      <section id="buy" className="container mx-auto px-4 py-16 mb-16">
+        <div className="max-w-2xl mx-auto text-center space-y-8">
+          <div className="space-y-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-primary">Купить книгу</h3>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto"></div>
+          </div>
+          
+          <Card className="p-8 border-2 border-primary/20 shadow-xl bg-gradient-to-br from-purple-50 to-orange-50">
+            <CardContent className="space-y-6 p-0">
+              <div className="space-y-2">
+                <p className="text-4xl font-bold text-primary">Доступно на Литрес</p>
+                <p className="text-muted-foreground">Электронная и аудио версии</p>
+              </div>
+              <Button 
+                asChild 
+                size="lg" 
+                className="w-full md:w-auto bg-secondary hover:bg-secondary/90 text-xl py-6 px-12"
+              >
+                <a href="https://www.litres.ru" target="_blank" rel="noopener noreferrer">
+                  <Icon name="ExternalLink" className="mr-2" size={24} />
+                  Перейти на Литрес
+                </a>
+              </Button>
+              <div className="flex justify-center gap-8 pt-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <Icon name="CheckCircle" className="text-primary" size={20} />
+                  <span>Мгновенная доставка</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="CheckCircle" className="text-primary" size={20} />
+                  <span>Читайте на любом устройстве</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <footer className="bg-primary/5 border-t border-primary/10 py-8">
+        <div className="container mx-auto px-4 text-center text-muted-foreground">
+          <p>© 2026 Даша Скворцова. Все права защищены.</p>
         </div>
       </footer>
     </div>
